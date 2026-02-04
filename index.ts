@@ -97,12 +97,13 @@ app.post("/api/contact", async (req: Request, res: Response) => {
 
 function escapeHtml(v: string) {
   return v
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;")
 }
+
 
 // Boot
 const port = Number(process.env.PORT || 3000)
