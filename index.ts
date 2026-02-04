@@ -14,7 +14,7 @@ const app = express()
 app.use(express.json())
 
 // If your frontend is on another domain (static site), enable CORS:
-const allowedOrigin = process.env.ALLOWED_ORIGIN || "*"
+const allowedOrigin =  "*"
 app.use(
   cors({
     origin: allowedOrigin,
