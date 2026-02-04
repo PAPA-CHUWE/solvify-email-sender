@@ -85,7 +85,7 @@ app.post("/api/contact", async (req: Request, res: Response) => {
 
     if (error) {
       console.error("Resend error:", error)
-      return res.status(500).json({ ok: false, error: "Email send failed", leadId: lead._id })
+      return res.status(500).json({ ok: false, error: "Email send failed.", leadId: lead._id })
     }
 
     return res.status(200).json({ ok: true, leadId: lead._id })
