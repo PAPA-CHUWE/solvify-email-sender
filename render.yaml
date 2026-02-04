@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: solvify-email-sender
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      # Set the rest in the Render dashboard as "Secret" values:
+      # MONGODB_URI
+      # RESEND_API_KEY
+      # CONTACT_TO_EMAIL
+      # CONTACT_CC_EMAIL
+      # FROM_EMAIL
+      # ALLOWED_ORIGIN
