@@ -56,7 +56,7 @@ app.post("/api/contact", async (req: Request, res: Response) => {
       ip: String(req.headers["x-forwarded-for"] || req.socket.remoteAddress || ""),
     })
 
-    const to = process.env.CONTACT_TO_EMAIL || "terrence.c@solvifytech.co.zw"
+    const to = process.env.CONTACT_TO_EMAIL || "solvifyt@solvifytech.co.zw"
     const cc = process.env.CONTACT_CC_EMAIL || "info@solvifytech.co.zw"
     const from = "info@solvifytech.co.zw"
       ? `Solvify Technologies <solvifytech.co.zw>`
