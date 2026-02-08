@@ -58,8 +58,8 @@ app.post("/api/contact", async (req: Request, res: Response) => {
 
     const to = process.env.CONTACT_TO_EMAIL || "terrence.c@solvifytech.co.zw"
     const cc = process.env.CONTACT_CC_EMAIL || "info@solvifytech.co.zw"
-    const from = process.env.FROM_EMAIL
-      ? `Solvify Technologies <${process.env.FROM_EMAIL}>`
+    const from = "info@solvifytech.co.zw"
+      ? `Solvify Technologies <solvifytech.co.zw>`
       : "Solvify Technologies <solvifytech.co.zw>"
 
     const subject = `New lead: ${service} — ${name}`
