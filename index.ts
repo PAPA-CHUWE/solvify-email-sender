@@ -60,7 +60,7 @@ app.post("/api/contact", async (req: Request, res: Response) => {
     const cc = process.env.CONTACT_CC_EMAIL || "info@solvifytech.co.zw"
     const from = process.env.FROM_EMAIL
       ? `Solvify Technologies <${process.env.FROM_EMAIL}>`
-      : "Solvify Technologies <no-reply@solvifytech.co.zw>"
+      : "Solvify Technologies <solvifytech.co.zw>"
 
     const subject = `New lead: ${service} — ${name}`
 
